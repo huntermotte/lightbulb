@@ -1,4 +1,5 @@
-const LocalStrategy = require('passport-local').Strategy;
+// const LocalStrategy = require('passport-local').Strategy;
+const {BasicStrategy} = require('passport-http');
 const path = require('path');
 const express = require('express');
 const mongoose = require('mongoose');
@@ -77,20 +78,28 @@ app.post('/api/register', (req, res) => {
     })
 });
 
-passport.use(new LocalStrategy(
-  function(username, password, done) {
-    User.findOne({ username: username }, function (err, user) {
-      if (err) { return done(err); }
-      if (!user) {
-        return done(null, false, { message: 'Incorrect username.' });
-      }
-      if (!user.validatePassword(password)) {
-        return done(null, false, { message: 'Incorrect password.' });
-      }
-      return done(null, user);
-    });
-  }
-));
+const basicStrategy = new BasicStrategy((username, password, callback) => {
+	let user;
+	User
+		.findOne({username: username})
+		.exec()
+		.then(_user => {
+			user = _user;
+			if (!user) {
+				return callback(null, false, {message: 'Incorrect username'});
+			}
+			return user.validatePassword(password);
+		})
+		.then(isValid => {
+			if (!isValid) {
+				return callback(null, false, {message: 'Incorrect password'});
+			}
+			else {
+				return callback(null, user);
+			}
+		})
+		.catch(err => console.log('Invalid username or password'))
+});
 
 app.use(session({
 	secret: 'keyboard cat',
@@ -98,6 +107,7 @@ app.use(session({
 	saveUninitialized: true
 }));
 
+passport.use(basicStrategy);
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -121,14 +131,14 @@ const isAuthenticated = (req, res, next) => {
 }
 
 // login endpoint
-app.get('/me',
-  passport.authenticate('local', { session: true }),
+app.get('/api/me',
+  passport.authenticate('basic', { session: true }),
   function(req, res) {
     res.json(req.user);
   });
 
 // logout endpoint
-app.get('/logout', function(req, res) {
+app.get('/api/logout', function(req, res) {
   req.session.destroy(function (err) {
   	if(err){
   		res.send(err);

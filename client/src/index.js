@@ -4,18 +4,26 @@ import App from './App';
 import './index.css';
 import {Provider} from 'react-redux';
 import store from './store';
-// import {Router, Route, IndexRoute, hashHistory} from 'react-router';
+import {Router, Route, IndexRoute, hashHistory} from 'react-router';
+import RegisterPage from './components/register-page';
+import LoginPage from './components/login-page';
+import Explore from './components/explore';
+import Home from './components/home';
 
-// const routes = (
-//   <Router history={hashHistory}>
-//     <Route path="/" component={App}>
-//     </Route>
-//   </Router
-// );
+const routes = (
+  <Provider store={store}>
+    <Router history={hashHistory}>
+      <Route path="/" component={App}>
+        <IndexRoute component={Home} />
+        <Route path="/register" component={RegisterPage} />
+        <Route path="/login" component={LoginPage} />
+        <Route path="/explore" component={Explore} />
+      </Route>
+    </Router>
+  </Provider>
+);
 
 ReactDOM.render(
-  <Provider store={store}>
-  <App />
-  </Provider>,
+  routes,
   document.getElementById('root')
 );
