@@ -19,6 +19,17 @@ export const retrieveVenueData = (venueData) => ({
   venueData
 })
 
+export const ACCEPT_VENUE_NOTES = 'ACCEPT_VENUE_NOTES';
+export const acceptVenueNotes = (notes) => ({
+  type: ACCEPT_VENUE_NOTES,
+  notes
+})
+
+export const SET_CURRENT_VENUE = 'SET_CURRENT_VENUE';
+export const setCurrentVenue = (currentVenue) => ({
+  type: SET_CURRENT_VENUE,
+  currentVenue
+})
 
 export const saveUserInDatabase = (username, password) => {
   return (dispatch) => {
@@ -30,6 +41,59 @@ export const saveUserInDatabase = (username, password) => {
       success: (user) => {
         dispatch(receiveCredentials(user))
         hashHistory.push('/login')
+      },
+      error: (err) => console.log(err)
+    })
+  }
+}
+
+export const addVenueToSavedList = (name) => {
+  return (dispatch) => {
+    $.ajax({
+      type: 'POST',
+      data: JSON.stringify({name}),
+      contentType: 'application/json',
+      url: 'http://localhost:8080/api/venues',
+      success:  (venue) => {
+        console.log(venue)
+        dispatch(retrieveVenueData(venue))
+        alert('Venue successfully added!')
+      },
+      error: (err) => console.log(err)
+    })
+  }
+}
+
+export const addNoteToVenue = (name, note) => {
+  return (dispatch) => {
+    $.ajax({
+      type: 'PUT',
+      data: JSON.stringify({name, note}),
+      contentType: 'application/json',
+      url: 'http://localhost:8080/api/venues',
+      success: (response) => {
+        console.log(response)
+        dispatch(retrieveVenueData(response))
+        if (response.notes) {
+          alert('Note added!')
+        }
+      },
+      error: (err) => console.log(err)
+    })
+  }
+}
+
+export const grabNotesForSavedVenues = (name) => {
+  return (dispatch) => {
+    $.ajax({
+      type: 'POST',
+      data: JSON.stringify({name}),
+      contentType: 'application/json',
+      url: 'http://localhost:8080/api/venues/notes',
+      success: (venue) => {
+        if (venue.notes) {
+          dispatch(acceptVenueNotes(venue.notes))
+        }
       },
       error: (err) => console.log(err)
     })
@@ -75,7 +139,10 @@ export const getNewVenueSuggestions = () => {
       type: 'GET',
       url: 'https://api.foursquare.com/v2/venues/explore?ll=35.77,-78.63&client_id=G21UGA10DG4RYZZFJPZTORRVYB3NHGE2SVWJO33BB2XKHVQR&client_secret=OJF0EI1MJGAXWX3LPJKIEQKU0E4UJRP333PNBC2R5LIFIAWO&v=20161016&section=food',
       success: (data) => {
-        dispatch(retrieveVenueData(data))
+        let randomIndex = Math.floor(Math.random() * 30) + 1
+        dispatch(retrieveVenueData(data.response.groups[0].items[randomIndex].venue))
+        dispatch(setCurrentVenue(data.response.groups[0].items[randomIndex].venue))
+        dispatch(grabNotesForSavedVenues(data.response.groups[0].items[randomIndex].venue.name))
       },
       error: (err) => console.log(err)
     })

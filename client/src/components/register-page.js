@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import * as actions from '../actions/index';
+import sunset2 from './sunset2.jpg'
 
 export class RegisterPage extends React.Component {
   constructor(props) {
@@ -9,8 +10,12 @@ export class RegisterPage extends React.Component {
 
   render() {
     return(
-      <div>
-        <form className="registration-form" onSubmit={(event) => {
+      <div className="register-page" style={{
+        background: 'url(' + sunset2 + ') no-repeat center center fixed',
+        backgroundSize: 'cover',
+        height: '100vh'
+      }}>
+        <form className="registration-form" style={{position: 'absolute', width: '50%', textAlign: 'center', top: '25%'}} onSubmit={(event) => {
           event.preventDefault();
           let username = event.target.username.value;
           let password = event.target.password.value;

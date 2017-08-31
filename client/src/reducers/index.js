@@ -2,7 +2,9 @@ import * as actions from '../actions/index';
 
 const initialState = {
   user: {},
-  venueData: {}
+  venueData: {},
+  notes: [],
+  currentVenue: {}
 }
 
 const usersReducer = (state=initialState, action) => {
@@ -22,6 +24,18 @@ const usersReducer = (state=initialState, action) => {
     return {
       ...state,
       venueData: action.venueData
+    }
+  }
+  else if (action.type === actions.ACCEPT_VENUE_NOTES) {
+    return {
+      ...state,
+      notes: action.notes
+    }
+  }
+  else if (action.type === actions.SET_CURRENT_VENUE) {
+    return {
+      ...state,
+      currentVenue: action.currentVenue
     }
   }
   else {

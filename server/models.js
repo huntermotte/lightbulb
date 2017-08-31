@@ -6,7 +6,16 @@ mongoose.Promise = global.Promise;
 const userSchema = new mongoose.Schema({
   username: {type: String, required: true, unique: true},
   password: {type: String, required: true},
-  notes: String
+  notes: Array
+});
+
+// const venueSchema
+// // name: String
+// // notes: Array
+const venueSchema = new mongoose.Schema({
+  name: String,
+  notes: Array
+  // pushing an objectw user id and their note int the notes array
 });
 
 userSchema.methods.validatePassword = function(password) {
@@ -26,5 +35,6 @@ userSchema.methods.createExample = function() {
 }
 
 const User = mongoose.model('User', userSchema);
+const Venue = mongoose.model('Venue', venueSchema);
 
-module.exports = {User};
+module.exports = {User, Venue};

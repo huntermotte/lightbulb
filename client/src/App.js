@@ -10,9 +10,9 @@ class App extends Component {
     return (
       <div className="App">
         <nav className="mainNav">
-          <Link to={'/'}><button>Home</button></Link>
-          <Link to={'/register'}><button>Register</button></Link>
-          <Link to={'/login'}><button>Login</button></Link>
+          <button><Link to={'/'}>Home</Link></button>
+          <button><Link to={'/register'}>Register</Link></button>
+          <button><Link to={'/login'}>Login</Link></button>
         </nav>
 
         <div>{this.props.children}</div>

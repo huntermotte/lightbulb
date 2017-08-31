@@ -1,6 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import * as actions from '../actions/index';
+import sunset from './sunset.jpg';
+import '../login-page.css';
 
 export class LoginPage extends React.Component {
   constructor(props) {
@@ -9,7 +11,11 @@ export class LoginPage extends React.Component {
 
   render() {
     return(
-      <div>
+      <div className="login-div" style={{
+        background: 'url(' + sunset + ') no-repeat center center fixed',
+        backgroundSize: 'cover',
+        height: '100vh'
+      }}>
         <form className="login-form" onSubmit={(event) => {
           event.preventDefault();
           let username = event.target.username.value;
