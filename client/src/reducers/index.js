@@ -38,6 +38,12 @@ const usersReducer = (state=initialState, action) => {
       currentVenue: action.currentVenue
     }
   }
+  else if (action.type === actions.INSERT_USER_DATA) {
+    return {
+      ...state,
+      userData: action.userData
+    }
+  }
   else {
     return state
   }

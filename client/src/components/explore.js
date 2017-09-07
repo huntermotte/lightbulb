@@ -2,6 +2,9 @@ import React from 'react';
 import {connect} from 'react-redux';
 import * as actions from '../actions/index';
 import VenueMap from './map';
+import {Link} from 'react-router';
+import Profile from './profile';
+import styles from '../styles/explore.css';
 
 export class Explore extends React.Component {
   constructor(props) {
@@ -15,12 +18,9 @@ export class Explore extends React.Component {
 
   render() {
     return(
-      <div>
+      <div className="exploreMain" >
         <nav>
-          <button>Lunch</button>
-          <button>Dinner</button>
-          <button>Bars</button>
-          <button>My Notes</button>
+          <button><Link to={'/profile'}>My Venues and Notes</Link></button>
           <button onClick={(event) => {
             event.preventDefault()
             this.props.logoutUser()
@@ -48,16 +48,17 @@ export class Explore extends React.Component {
             <input type="submit" value="Add" />
           </form>
 
+          <h2>Notes for {this.props.venueName}: {this.props.notes.map((note, index) => <li key={index}> {note} </li>)}</h2>
           <h2>Address: {this.props.address}</h2>
           <h2>Category: {this.props.venueType}</h2>
           <h2>Price: {this.props.price}</h2>
 
-          <button onClick={(event) => {
+          <button style={{marginBottom: '20px'}} onClick={(event) => {
             event.preventDefault()
             this.props.getNewVenueSuggestions()
           }}>Get another suggestion</button>
 
-        <VenueMap />
+        <VenueMap latitude={this.props.latitude} longitude={this.props.longitude} />
 
       </div>
     )
@@ -89,11 +90,26 @@ const mapStateToProps = (state, props) => {
   if (state.currentVenue.location) {
     address = state.currentVenue.location.address
   }
+  let latitude = '';
+  if (state.currentVenue.location) {
+    latitude = state.currentVenue.location.lat
+  }
+  let longitude = '';
+  if (state.currentVenue.location) {
+    longitude = state.currentVenue.location.lng
+  }
+  let notes = [];
+  if (state.notes) {
+    notes = state.notes
+  }
   return {
     venueName,
     venueType,
     price,
-    address
+    address,
+    latitude,
+    longitude,
+    notes
   }
 }
 

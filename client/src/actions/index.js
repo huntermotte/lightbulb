@@ -31,6 +31,12 @@ export const setCurrentVenue = (currentVenue) => ({
   currentVenue
 })
 
+export const INSERT_USER_DATA = 'INSERT_USER_DATA';
+export const insertUserData = (userData) => ({
+  type: INSERT_USER_DATA,
+  userData
+})
+
 export const saveUserInDatabase = (username, password) => {
   return (dispatch) => {
     return $.ajax({
@@ -91,8 +97,8 @@ export const grabNotesForSavedVenues = (name) => {
       contentType: 'application/json',
       url: 'http://localhost:8080/api/venues/notes',
       success: (venue) => {
-        if (venue.notes) {
-          dispatch(acceptVenueNotes(venue.notes))
+        if (venue[0].notes) {
+          dispatch(acceptVenueNotes(venue[0].notes))
         }
       },
       error: (err) => console.log(err)
@@ -130,6 +136,19 @@ export const logoutUser = () => {
       }
     }
   })
+  }
+}
+
+export const getUserData = () => {
+  return (dispatch) => {
+    $.ajax({
+      type: 'GET',
+      url: 'http://localhost:8080/api/venues',
+      success: (response) => {
+        console.log(response)
+        dispatch(insertUserData(response))
+      }
+    })
   }
 }
 

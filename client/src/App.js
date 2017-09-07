@@ -9,11 +9,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <nav className="mainNav">
-          <button><Link to={'/'}>Home</Link></button>
-          <button><Link to={'/register'}>Register</Link></button>
-          <button><Link to={'/login'}>Login</Link></button>
-        </nav>
 
         <div>{this.props.children}</div>
 

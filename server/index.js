@@ -178,40 +178,42 @@ app.post('/api/venues', isAuthenticated, (req, res) => {
     let {note} = req.body
     let {name} = req.body
 
-    return Venue.update(
-      {name},
-      {$push: {"notes": note}}
-    )
-    .exec()
-    .then(err => {
+    return Venue.update({name}, {$push: {"notes": note}}, (err, data) => {
       if(err) {
         res.send(err)
+      } else {
+        Venue.findOne({name}, (err, venue) => {
+          if(err) {
+            res.send(err)
+          }
+
+          res.json(venue)
+        })
       }
-      Venue.findOne({name})
-      .exec()
-      .then(venue => {
-        console.log(venue)
-        res.json(venue)
-      })
     })
-    .catch(err => console.log(err))
   })
 
   // check if venue exists and get its notes. do a count, if it exists return the venue and put it in the state. loop thru venue notes in the component
   app.post('/api/venues/notes', isAuthenticated, (req, res) => {
     let {name} = req.body
-    console.log(name)
 
     return Venue.find({name})
-    .count()
-    .exec()
-    .then((count, venue) => {
-      if (count > 0) {
-      return res.json(venue)
+    .then(venue => {
+      if (venue.length > 0) {
+        return res.json(venue)
       }
       return res.json({message: 'No notes for this venue'})
     })
     .catch(err => console.log(err))
+  })
+
+  app.get('/api/venues', isAuthenticated, (req, res) => {
+    return Venue.find({}, (err, venues) => {
+      if (err) {
+        res.send(err)
+      }
+      res.json(venues)
+    })
   })
 
 

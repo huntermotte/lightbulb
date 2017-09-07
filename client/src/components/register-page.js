@@ -15,7 +15,7 @@ export class RegisterPage extends React.Component {
         backgroundSize: 'cover',
         height: '100vh'
       }}>
-        <form className="registration-form" style={{position: 'absolute', width: '50%', textAlign: 'center', top: '25%'}} onSubmit={(event) => {
+        <form className="registration-form" onSubmit={(event) => {
           event.preventDefault();
           let username = event.target.username.value;
           let password = event.target.password.value;

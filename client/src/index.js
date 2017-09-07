@@ -9,6 +9,7 @@ import RegisterPage from './components/register-page';
 import LoginPage from './components/login-page';
 import Explore from './components/explore';
 import Home from './components/home';
+import Profile from './components/profile'
 
 const routes = (
   <Provider store={store}>
@@ -18,6 +19,7 @@ const routes = (
         <Route path="/register" component={RegisterPage} />
         <Route path="/login" component={LoginPage} />
         <Route path="/explore" component={Explore} />
+        <Route path="/profile" component={Profile} />
       </Route>
     </Router>
   </Provider>
