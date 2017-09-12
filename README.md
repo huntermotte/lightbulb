@@ -29,3 +29,5 @@ Functionality for different areas in Raleigh for bars and restaurants coming soo
 
 * When you click the "My Venues and Notes" button you will link to the venues and corresponding notes taken for them
 * You can try the best food around you and remember what was good and what wasn't
+
+![alt text](hangoutProfile.png)
