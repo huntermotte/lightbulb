@@ -1,13 +1,16 @@
 .mainNav {
-  position: absolute;
+  float: right;
   text-align: right;
   width: 100%;
 }
 
-.navButton {
+.homeButton {
+  float: right;
+  position: absolute;
+  right: 20%;
   text-align: center;
   font-size: 20px;
-  background: red;
+  background: #e74c3c;
   padding: 10px;
   margin-left: 5px;
   margin-right: 5px;
@@ -15,15 +18,122 @@
   color: white;
   border: 1px solid black;
   font-family: Ubuntu;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 25px;
 }
 
-.navButton:hover {
-
-}
-
-.getStarted {
-  background: red;
+.registerButton {
+  float: right;
+  position: absolute;
+  right: 10%;
+  text-align: center;
+  font-size: 20px;
+  background: #e74c3c;
+  padding: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 120px;
   color: white;
   border: 1px solid black;
   font-family: Ubuntu;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 25px;
+}
+
+.loginButton {
+  float: right;
+  position: absolute;
+  right: 0%;
+  text-align: center;
+  font-size: 20px;
+  background: #e74c3c;
+  padding: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 120px;
+  color: white;
+  border: 1px solid black;
+  font-family: Ubuntu;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 25px;
+}
+
+.getStarted {
+  background: #e74c3c;
+  color: white;
+  border: 1px solid black;
+  font-family: Ubuntu;
+  border-radius: 25px;
+  position: absolute;
+  text-align: center;
+  top: 55%;
+  width: 150px;
+  height: 40px;
+  font-family: Ubuntu;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+/* Portrait */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)  {
+  .homeButton {
+    position: absolute;
+    top: 20%;
+    left: 0%;
+  }
+
+  .registerButton {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .loginButton {
+    position: absolute;
+    top: 20%;
+    text-align: center;
+  }
+
+  .title {
+    left: 14%
+  }
+
+  .header1 {
+    position: absolute;
+    padding-top: 5px
+  }
+
+  .header2 {
+    position: absolute;
+    padding-top: 35px;
+    font-size: 15px;
+  }
+
+  .header3 {
+    position: absolute;
+    padding-top: 50px;
+    font-size: 15px;
+  }
+
+  .getStarted {
+    display: none;
+  }
+
+  video {
+    height: 100%;
+
+  }
 }

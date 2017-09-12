@@ -16,22 +16,22 @@ export class Profile extends React.Component {
   render() {
     return(
       <div className="profileMain" >
-      <nav>
-        <button><Link to={'/explore'}>Go Back to Explore</Link></button>
-        <button onClick={(event) => {
+      <nav className="profileNav" >
+        <Link to={'/explore'}><button className="profileButton explore" >Go Back to Explore</button></Link>
+        <button className="profileButton logout" onClick={(event) => {
           event.preventDefault()
           this.props.logoutUser()
         }}>Logout</button>
       </nav>
-        <h1>My Venues and Notes</h1>
+        <h1 className="profileHeader" >My Venues and Notes</h1>
         {this.props.userVenues.map((venue, index) => {
           return(
             <div key={index}>
-              <h2> {venue.name} </h2>
+              <h2 className="venue"> {venue.name} </h2>
                 <ul>
                   {venue.notes.map((note, index) => {
                     return(
-                      <li key={index}> {note} </li>
+                      <li className="note" key={index}> {note} </li>
                     )
                   })}
                 </ul>
@@ -44,7 +44,8 @@ export class Profile extends React.Component {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  getUserData: () => dispatch(actions.getUserData())
+  getUserData: () => dispatch(actions.getUserData()),
+  logoutUser: () => dispatch(actions.logoutUser())
 })
 
 const mapStateToProps = (state, props) => {

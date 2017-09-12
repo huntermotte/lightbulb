@@ -1,7 +1,9 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import * as actions from '../actions/index';
-import sunset2 from './sunset2.jpg'
+import sunset2 from './sunset2.jpg';
+import styles from '../styles/register.css';
+import {Link} from 'react-router';
 
 export class RegisterPage extends React.Component {
   constructor(props) {
@@ -24,12 +26,12 @@ export class RegisterPage extends React.Component {
           <label htmlFor="userUsername" className="usernameText">Choose a Username:</label><br />
           <input type="text" name="username" className="newUsername form-control" placeholder="Choose a Username" />
           <br /><br />
-          <label htmlFor="userPassword" className="passwordText">Choose a Password:</label>
+          <label htmlFor="userPassword" className="passwordText">Choose a Password:</label><br />
           <input type="password" name="password" className="newPassword form-control" placeholder="Choose a Password" /><br />
           <br />
             <div className="buttons">
-              <input type="submit" className="btn btn-default" value="Register" />
-              <a href="index.html"><button type="button" className="btn btn-default">Home</button></a>
+              <input type="submit" className="btn btn-default submit" value="Register" />
+              <Link to={'/'}><button type="button" className="btn btn-default home">Home</button></Link>
             </div>
         </form>
       </div>

@@ -1,0 +1,23 @@
+.usernameText, .passwordText {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #e74c3c;
+  border: 1px solid black;
+  padding: 5px;
+  padding-bottom: 8px;
+}
+
+.registration-form {
+  padding-top: 250px;
+}
+
+.submit, .home {
+  background: #e74c3c;
+  color: white;
+  font-family: Ubuntu;
+  border: 1px solid black;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 20px;
+}

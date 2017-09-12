@@ -1,0 +1,28 @@
+.login-form {
+  padding-top: 250px;
+}
+
+.newUsername, .newPassword {
+  margin: 5px;
+  width: 25%;
+  height: 20px;
+  font-family: Ubuntu;
+  border: 1px solid black;
+  padding-left: 3px;
+}
+
+.submit, .home {
+  background: #e74c3c;
+  color: white;
+  font-family: Ubuntu;
+  border: 1px solid black;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 20px;
+}
+
+label {
+  color: black;
+  font weight: bold;
+  font-family: Ubuntu;
+}

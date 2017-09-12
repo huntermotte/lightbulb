@@ -1,6 +1,7 @@
 .profileMain {
 	margin:0;
 	padding:0;
+  margin-top: -18px;
 	font-family:"arial",heletica,sans-serif;
 	font-size:12px;
     background: #2980b9 url('https://static.tumblr.com/03fbbc566b081016810402488936fbae/pqpk3dn/MRSmlzpj3/tumblr_static_bg3.png') repeat 0 0;
@@ -9,7 +10,47 @@
 	-ms-animation: 10s linear 0s normal none infinite animate;
 	-o-animation: 10s linear 0s normal none infinite animate;
 	animation: 10s linear 0s normal none infinite animate;
+}
 
+.profileNav {
+  position: absolute;
+  text-align: right;
+  width: 100%;
+}
+
+.profileButton {
+  text-align: center;
+  font-size: 15px;
+  background: #e74c3c;
+  padding: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 155px;
+  color: white;
+  border: 1px solid black;
+  font-family: Ubuntu;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.profileHeader {
+  padding-top: 20px;
+  text-decoration: underline;
+  font-family: Ubuntu;
+}
+
+.venue {
+  font-family: Ubuntu;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.note {
+  font-family: Ubuntu;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 0;
+  padding-left: 0;
 }
 
 @-webkit-keyframes animate {
@@ -37,8 +78,38 @@
 	to {background-position: 500px 0;}
 }
 
-h1, h2, ul {
+/*h1, h2, ul {
   font-family: "Whitney Cond A", "Whitney Cond B", "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma, Sans-Serif;
   font-weight: 700;
   color: white;
+}*/
+
+li {
+  list-style: none;
+  padding: 0;
+}
+
+ul {
+  padding: 0;
+}
+
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+   {
+
+.profileHeader {
+  padding-top: 50px;
+}
+
+.explore {
+  position: absolute;
+  left: 7%;
+}
+
+.logout {
+  position: absolute;
+  left: 50%;
+}
+
 }

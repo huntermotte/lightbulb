@@ -19,15 +19,15 @@ export class Explore extends React.Component {
   render() {
     return(
       <div className="exploreMain" >
-        <nav>
-          <button><Link to={'/profile'}>My Venues and Notes</Link></button>
-          <button onClick={(event) => {
+        <nav className="exploreNav" >
+          <Link to={'/profile'}><button className="exploreButton notes">My Venues and Notes</button></Link>
+          <button className="exploreButton logoutButton" onClick={(event) => {
             event.preventDefault()
             this.props.logoutUser()
           }}>Logout</button>
         </nav>
 
-        <h1>Why Not {this.props.venueName}?</h1>
+        <h1 className="exploreHeader" >Why Not {this.props.venueName}?</h1>
 
           <button className='save-button' onClick={(event) => {
             event.preventDefault()
@@ -45,7 +45,7 @@ export class Explore extends React.Component {
             event.target.userInput.value = ''
           }} >
             <input type="text" name="userInput" placeholder="Add your note here" />
-            <input type="submit" value="Add" />
+            <input className="noteAdd" type="submit" value="Add" />
           </form>
 
           <h2>Notes for {this.props.venueName}: {this.props.notes.map((note, index) => <li key={index}> {note} </li>)}</h2>
@@ -53,7 +53,7 @@ export class Explore extends React.Component {
           <h2>Category: {this.props.venueType}</h2>
           <h2>Price: {this.props.price}</h2>
 
-          <button style={{marginBottom: '20px'}} onClick={(event) => {
+          <button className="newSuggestionButton" style={{marginBottom: '20px'}} onClick={(event) => {
             event.preventDefault()
             this.props.getNewVenueSuggestions()
           }}>Get another suggestion</button>

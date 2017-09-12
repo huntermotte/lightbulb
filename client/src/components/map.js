@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
+import marker from './marker.png';
 
-const image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+// const marker = new google.maps.Marker({})
 
 const LocationMarker = ({ text }) => <div style={{
-  height: 15,
-  width: 10,
+  height: 35,
+  width: 25,
   top: -20,
   left: -30,
-  background: 'red',
   fontWeight: 'bold',
   position: 'relative',
   color: 'black'
-}}>{text}</div>;
+}}>
+<img src={marker} />
+</div>;
 
 export default class VenueMap extends Component {
   static defaultProps = {
@@ -39,7 +41,7 @@ export default class VenueMap extends Component {
         <LocationMarker
           lat={this.props.latitude}
           lng={this.props.longitude}
-          text={'X'}
+          text={marker}
         />
       </GoogleMapReact>
       </div>

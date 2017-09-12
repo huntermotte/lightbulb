@@ -5,6 +5,7 @@
 .exploreMain {
 	margin:0;
 	padding:0;
+  margin-top: -18px;
 	font-family:"arial",heletica,sans-serif;
 	font-size:12px;
     background: #2980b9 url('https://static.tumblr.com/03fbbc566b081016810402488936fbae/pqpk3dn/MRSmlzpj3/tumblr_static_bg3.png') repeat 0 0;
@@ -13,7 +14,77 @@
 	-ms-animation: 10s linear 0s normal none infinite animate;
 	-o-animation: 10s linear 0s normal none infinite animate;
 	animation: 10s linear 0s normal none infinite animate;
+}
 
+.exploreNav {
+  position: absolute;
+  text-align: right;
+  width: 100%;
+}
+
+.exploreButton {
+  text-align: center;
+  font-size: 15px;
+  background: #e74c3c;
+  padding: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 170px;
+  color: white;
+  border: 1px solid black;
+  font-family: Ubuntu;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.save-button {
+  text-align: center;
+  font-size: 15px;
+  background: #e74c3c;
+  padding: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 150px;
+  color: white;
+  border: 1px solid black;
+  font-family: Ubuntu;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.newSuggestionButton {
+  text-align: center;
+  font-size: 15px;
+  background: #e74c3c;
+  padding: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 130px;
+  color: white;
+  border: 1px solid black;
+  font-family: Ubuntu;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.add-note-form {
+}
+
+.save-button {
+  margin-bottom: 15px;
+}
+
+.exploreHeader {
+  padding-top: 15px;
+  margin-bottom: 5px;
+}
+
+.noteAdd {
+  background: #e74c3c;
+  color: white;
+  font-family: Ubuntu;
+  border: 1px solid black;
+  cursor: pointer;
 }
 
 @-webkit-keyframes animate {
@@ -45,4 +116,25 @@ h1, h2, li {
   font-family: "Whitney Cond A", "Whitney Cond B", "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma, Sans-Serif;
   font-weight: 700;
   color: white;
+}
+
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+{
+  .exploreHeader {
+    padding-top: 50px;
+  }
+
+  .notes {
+    position: absolute;
+    left: 3%;
+  }
+
+  .logoutButton {
+    position: absolute;
+    left: 50%;
+  }
+
+
 }
