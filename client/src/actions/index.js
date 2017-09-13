@@ -43,7 +43,7 @@ export const saveUserInDatabase = (username, password) => {
       type: 'POST',
       data: JSON.stringify({username, password}),
       contentType: 'application/json',
-      url: 'http://localhost:8080/api/register',
+      url: '/api/register',
       success: (user) => {
         dispatch(receiveCredentials(user))
         hashHistory.push('/login')
@@ -59,7 +59,7 @@ export const addVenueToSavedList = (name) => {
       type: 'POST',
       data: JSON.stringify({name}),
       contentType: 'application/json',
-      url: 'http://localhost:8080/api/venues',
+      url: '/api/venues',
       success:  (venue) => {
         console.log(venue)
         dispatch(retrieveVenueData(venue))
@@ -76,7 +76,7 @@ export const addNoteToVenue = (name, note) => {
       type: 'PUT',
       data: JSON.stringify({name, note}),
       contentType: 'application/json',
-      url: 'http://localhost:8080/api/venues',
+      url: '/api/venues',
       success: (response) => {
         console.log(response)
         dispatch(retrieveVenueData(response))
@@ -95,7 +95,7 @@ export const grabNotesForSavedVenues = (name) => {
       type: 'POST',
       data: JSON.stringify({name}),
       contentType: 'application/json',
-      url: 'http://localhost:8080/api/venues/notes',
+      url: '/api/venues/notes',
       success: (venue) => {
         if (venue[0].notes) {
           dispatch(acceptVenueNotes(venue[0].notes))
@@ -114,7 +114,7 @@ export const getLoggedInUser = (username, password) => {
 	    'content-type': "application/json",
 	    authorization: "Basic " + btoa(username + ':' + password)
       },
-      url: 'http://localhost:8080/api/me',
+      url: '/api/me',
       success: (user) => {
         dispatch(receiveCredentials(user))
         hashHistory.push('/explore')
@@ -128,7 +128,7 @@ export const logoutUser = () => {
   return (dispatch) => {
   $.ajax({
     type: 'GET',
-    url: 'http://localhost:8080/api/logout',
+    url: '/api/logout',
     success: function(data) {
       dispatch(logoutCurrentUser())
       if (data.loggedOut) {
@@ -143,7 +143,7 @@ export const getUserData = () => {
   return (dispatch) => {
     $.ajax({
       type: 'GET',
-      url: 'http://localhost:8080/api/venues',
+      url: '/api/venues',
       success: (response) => {
         console.log(response)
         dispatch(insertUserData(response))
