@@ -13,7 +13,7 @@ const bcrypt = require('bcrypt');
 const {User, Venue} = require('./models');
 const app = express();
 
-mongoose.connect('mongodb://localhost:27017/hangout-roulette-users')
+mongoose.connect(process.env.DATABASE_URL || 'mongodb://localhost:27017/hangout-roulette-users')
 
 app.use(bodyParser.json());
 // app.use(bodyParser.urlencoded({extended: false}));
