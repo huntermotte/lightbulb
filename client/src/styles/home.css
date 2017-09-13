@@ -83,7 +83,37 @@
 }
 
 .container {
-}
+  background: #2980b9 url('https://static.tumblr.com/03fbbc566b081016810402488936fbae/pqpk3dn/MRSmlzpj3/tumblr_static_bg3.png') repeat 0 0;
+  -webkit-animation: 10s linear 0s normal none infinite animate;
+  -moz-animation: 10s linear 0s normal none infinite animate;
+  -ms-animation: 10s linear 0s normal none infinite animate;
+  -o-animation: 10s linear 0s normal none infinite animate;
+  animation: 10s linear 0s normal none infinite animate;
+  }
+  @-webkit-keyframes animate {
+  from {background-position:0 0;}
+  to {background-position: 500px 0;}
+  }
+
+  @-moz-keyframes animate {
+  from {background-position:0 0;}
+  to {background-position: 500px 0;}
+  }
+
+  @-ms-keyframes animate {
+  from {background-position:0 0;}
+  to {background-position: 500px 0;}
+  }
+
+  @-o-keyframes animate {
+  from {background-position:0 0;}
+  to {background-position: 500px 0;}
+  }
+
+  @keyframes animate {
+  from {background-position:0 0;}
+  to {background-position: 500px 0;}
+  }
 
 /* Portrait */
 @media only screen
@@ -91,13 +121,13 @@
   and (max-device-width: 667px)  {
   .homeButton {
     position: absolute;
-    top: 20%;
+    top: 15%;
     left: 0%;
   }
 
   .registerButton {
     position: absolute;
-    top: 20%;
+    top: 15%;
     left: 10%;
     margin-left: auto;
     margin-right: auto;
@@ -106,37 +136,85 @@
 
   .loginButton {
     position: absolute;
-    top: 20%;
+    top: 15%;
     text-align: center;
   }
 
   .title {
-    left: 14%
+    left: 14%;
+    top: 5%;
+    z-index: 1;
   }
 
   .header1 {
     position: absolute;
-    padding-top: 5px
+    padding-top: 5px;
+    z-index: 1;
   }
 
   .header2 {
     position: absolute;
     padding-top: 35px;
     font-size: 15px;
+    z-index: 1;
   }
 
   .header3 {
     position: absolute;
     padding-top: 50px;
     font-size: 15px;
+    z-index: 1;
   }
 
   .getStarted {
-    display: none;
+    position: absolute;
+    top: 65%;
+  }
+
+  .container {
+    height: 100vh;
+    background: #2980b9 url('https://static.tumblr.com/03fbbc566b081016810402488936fbae/pqpk3dn/MRSmlzpj3/tumblr_static_bg3.png') repeat 0 0;
+  	-webkit-animation: 10s linear 0s normal none infinite animate;
+  	-moz-animation: 10s linear 0s normal none infinite animate;
+  	-ms-animation: 10s linear 0s normal none infinite animate;
+  	-o-animation: 10s linear 0s normal none infinite animate;
+  	animation: 10s linear 0s normal none infinite animate;
+  }
+  @-webkit-keyframes animate {
+  	from {background-position:0 0;}
+  	to {background-position: 500px 0;}
+  }
+
+  @-moz-keyframes animate {
+  	from {background-position:0 0;}
+  	to {background-position: 500px 0;}
+  }
+
+  @-ms-keyframes animate {
+  	from {background-position:0 0;}
+  	to {background-position: 500px 0;}
+  }
+
+  @-o-keyframes animate {
+  	from {background-position:0 0;}
+  	to {background-position: 500px 0;}
+  }
+
+  @keyframes animate {
+  	from {background-position:0 0;}
+  	to {background-position: 500px 0;}
   }
 
   video {
-    
+    position: absolute;
+    z-index: 0;
+    background-size: 100% 100%;
+    top: 0px;
+    left: 0px; /* fixed to left. Replace it by right if you want.*/
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
   }
 
 }
