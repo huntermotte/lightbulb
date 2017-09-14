@@ -2,6 +2,8 @@
 
 A way to simplify the age old of question of "Where should we go to eat?"
 
+Try it out here: https://hangoutroulette.herokuapp.com
+
 ![alt text](hangoutHome.png)
 
 Functionality for different areas in Raleigh for bars and restaurants coming soon!
