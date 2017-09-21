@@ -186,3 +186,223 @@
   }
 
 }
+
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 439px) {
+
+    .homeButton {
+      position: absolute;
+      top: 15%;
+      left: 0%;
+      width: 100px;
+      z-index: 2;
+    }
+
+    .registerButton {
+      position: absolute;
+      top: 15%;
+      left: 10%;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      width: 100px;
+      z-index: 2;
+    }
+
+    .loginButton {
+      position: absolute;
+      top: 15%;
+      text-align: center;
+      width: 100px;
+
+    }
+
+    .getStarted {
+      position: absolute;
+      top: 350px;
+    }
+
+    .title {
+      left: 9%;
+      top: 100px;
+      z-index: 1;
+    }
+
+    .header1 {
+      position: absolute;
+      padding-top: 150px;
+      z-index: 1;
+    }
+
+    .header2 {
+      position: absolute;
+      padding-top: 200px;
+      font-size: 15px;
+      z-index: 1;
+    }
+
+    .header3 {
+      position: absolute;
+      padding-top: 250px;
+      font-size: 15px;
+      z-index: 1;
+    }
+
+    video {
+      position: absolute;
+      z-index: 0;
+      background-size: 100% 100%;
+      top: 0px;
+      left: 0px; /* fixed to left. Replace it by right if you want.*/
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+    }
+
+  }
+
+  @media only screen
+    and (min-device-width: 375px)
+    and (max-device-width: 439px) {
+
+    .homeButton {
+      position: absolute;
+      top: 0;
+      left: 0%;
+      width: 120px;
+      z-index: 2;
+    }
+
+    .registerButton {
+      position: absolute;
+      top: 0;
+      left: 10%;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      width: 120px;
+      z-index: 2;
+    }
+
+    .loginButton {
+      position: absolute;
+      top: 0;
+      text-align: center;
+      width: 120px;
+    }
+
+    .getStarted {
+      position: absolute;
+      top: 350px;
+    }
+
+    .title {
+      left: 13%;
+      top: 75px;
+      z-index: 1;
+    }
+
+    .header1 {
+      position: absolute;
+      padding-top: 50px;
+      z-index: 1;
+    }
+
+    .header2 {
+      position: absolute;
+      padding-top: 75px;
+      font-size: 15px;
+      z-index: 1;
+    }
+
+    .header3 {
+      position: absolute;
+      padding-top: 90px;
+      font-size: 15px;
+      z-index: 1;
+    }
+
+  }
+
+@media only screen
+  and (min-device-width: 768px)
+  and (min-device-height: 439px) {
+    .homeButton {
+      position: absolute;
+      top: 0;
+      right: 31%;
+      width: 120px;
+      z-index: 2;
+    }
+
+    .registerButton {
+      position: absolute;
+      top: 0;
+      right: 16%;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      width: 120px;
+      z-index: 2;
+    }
+
+    .loginButton {
+      position: absolute;
+      top: 0;
+      right: 0;
+      text-align: center;
+      width: 120px;
+    }
+
+    .getStarted {
+      position: absolute;
+      top: 250px;
+    }
+  }
+
+@media only screen
+  and (min-device-width: 1024px)
+  and (min-device-height: 439px) {
+    .homeButton {
+      position: absolute;
+      top: 0;
+      right: 25%;
+      width: 120px;
+      z-index: 2;
+    }
+
+    .registerButton {
+      position: absolute;
+      top: 0;
+      right: 13%;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      width: 120px;
+      z-index: 2;
+    }
+
+    .loginButton {
+      position: absolute;
+      top: 0;
+      right: 0;
+      text-align: center;
+      width: 120px;
+    }
+
+    .getStarted {
+      position: absolute;
+      top: 350px;
+    }
+  }
+
+@media only screen
+  and (min-device-width: 1440px)
+  and (min-device-height: 439px) {
+    .getStarted {
+      position: absolute;
+      top: 450px;
+    }
+  }

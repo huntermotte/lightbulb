@@ -113,3 +113,43 @@ ul {
 }
 
 }
+
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 439px) {
+
+		.profileHeader {
+			padding-top: 100px;
+		}
+
+		.explore {
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+	}
+
+	@media only screen
+		and (min-device-width: 425px)
+		and (max-device-width: 439px) {
+
+			.explore {
+				margin-left: auto;
+				margin-right: auto;
+				left: 47px;
+			}
+		}
+
+@media only screen
+	and (min-device-width: 768px)
+	and (min-device-height: 439px) {
+		.profileHeader {
+			padding-top: 100px;
+		}
+
+		.explore {
+			margin-left: auto;
+			margin-right: auto;
+			left: 100px;
+		}
+	}
