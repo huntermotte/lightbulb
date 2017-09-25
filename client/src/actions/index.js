@@ -46,7 +46,7 @@ export const saveUserInDatabase = (username, password) => {
       url: '/api/register',
       success: (user) => {
         dispatch(receiveCredentials(user))
-        hashHistory.push('/explore')
+        hashHistory.push('/login')
       },
       error: (err) => console.log(err)
     })
