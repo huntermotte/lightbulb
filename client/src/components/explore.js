@@ -33,7 +33,7 @@ export class Explore extends React.Component {
             event.preventDefault()
             let name = this.props.venueName
             this.props.addVenueToSavedList(name)
-          }}>Save this venue!</button><br />
+          }}>Save This Venue!</button><br />
 
           <h2 style={{display: 'inline'}}>Add some notes to remember about this venue  </h2>
 
@@ -47,6 +47,7 @@ export class Explore extends React.Component {
             <input type="text" name="userInput" placeholder="Add your note here" />
             <input className="noteAdd" type="submit" value="Add" />
           </form>
+          <h3>Please click 'Save This Venue' in order to add notes!</h3>
 
           <h2>Notes for {this.props.venueName}: {this.props.notes.map((note, index) => <li key={index}> {note} </li>)}</h2>
           <h2>Address: {this.props.address}</h2>
