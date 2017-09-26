@@ -48,7 +48,10 @@ export const saveUserInDatabase = (username, password) => {
         dispatch(receiveCredentials(user))
         hashHistory.push('/login')
       },
-      error: (err) => console.log(err)
+      error: (err) => {
+        console.log(err)
+        alert('Incorrect username or password! Please try again')
+      }
     })
   }
 }
@@ -119,7 +122,10 @@ export const getLoggedInUser = (username, password) => {
         dispatch(receiveCredentials(user))
         hashHistory.push('/explore')
       },
-      error: (err) => console.log(err)
+      error: (err) => {
+        console.log(err)
+        alert('Incorrect username or password! Please try again')
+      }
     })
   }
 }

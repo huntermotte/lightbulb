@@ -4,7 +4,6 @@
 
 .newUsername, .newPassword {
   margin: 5px;
-  width: 25%;
   height: 20px;
   font-family: Ubuntu;
   border: 1px solid black;
