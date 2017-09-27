@@ -50,7 +50,7 @@ export const saveUserInDatabase = (username, password) => {
       },
       error: (err) => {
         console.log(err)
-        alert('Incorrect username or password! Please try again')
+        alert('Please enter a unique username and/or password')
       }
     })
   }
