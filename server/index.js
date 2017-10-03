@@ -1,4 +1,3 @@
-// const LocalStrategy = require('passport-local').Strategy;
 const {BasicStrategy} = require('passport-http');
 const path = require('path');
 const express = require('express');
@@ -8,7 +7,6 @@ const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const passport = require('passport');
 const bcrypt = require('bcrypt');
-// bcrypt js?? ^
 
 const {User, Venue} = require('./models');
 const app = express();
@@ -17,7 +15,6 @@ mongoose.connect(process.env.DATABASE_URL || 'mongodb://localhost:27017/hangout-
 
 app.use(bodyParser.json());
 // app.use(bodyParser.urlencoded({extended: false}));
-
 // API endpoints go here!
 
 // create users
@@ -161,7 +158,8 @@ app.post('/api/venues', isAuthenticated, (req, res) => {
   })
   .then(() => {
     return Venue.create({
-      name
+      name,
+      userID: req.user._id
     })
   })
   .then((venue, err) => {
@@ -196,9 +194,11 @@ app.post('/api/venues', isAuthenticated, (req, res) => {
   // check if venue exists and get its notes. do a count, if it exists return the venue and put it in the state. loop thru venue notes in the component
   app.post('/api/venues/notes', isAuthenticated, (req, res) => {
     let {name} = req.body
+    console.log(req.user._id)
 
     return Venue.find({name})
     .then(venue => {
+      console.log(venue)
       if (venue.length > 0) {
         return res.json(venue)
       }
@@ -208,7 +208,7 @@ app.post('/api/venues', isAuthenticated, (req, res) => {
   })
 
   app.get('/api/venues', isAuthenticated, (req, res) => {
-    return Venue.find({}, (err, venues) => {
+    return Venue.find(req.user._id, (err, venues) => {
       if (err) {
         res.send(err)
       }

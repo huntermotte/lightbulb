@@ -37,6 +37,11 @@ export const insertUserData = (userData) => ({
   userData
 })
 
+export const ADD_VENUE_SUCESS = 'ADD_VENUE_SUCESS';
+export const addVenueSuccess = () => ({
+  type: ADD_VENUE_SUCESS
+})
+
 export const saveUserInDatabase = (username, password) => {
   return (dispatch) => {
     return $.ajax({
@@ -66,6 +71,7 @@ export const addVenueToSavedList = (name) => {
       success:  (venue) => {
         console.log(venue)
         dispatch(retrieveVenueData(venue))
+        dispatch(addVenueSuccess())
         alert('Venue successfully added!')
       },
       error: (err) => console.log(err)

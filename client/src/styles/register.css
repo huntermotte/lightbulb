@@ -24,6 +24,14 @@
   font-size: 20px;
 }
 
+/*.form-container {
+  width: 40%;
+  height: 40%;
+  padding-top: 15%;
+  margin-left: auto;
+  margin-right: auto;
+}*/
+
 @media only screen
   and (min-device-width: 375px)
   and (max-device-width: 667px)

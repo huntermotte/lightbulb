@@ -6,7 +6,7 @@ mongoose.Promise = global.Promise;
 const userSchema = new mongoose.Schema({
   username: {type: String, required: true, unique: true},
   password: {type: String, required: true},
-  notes: Array
+  venues: Array
 });
 
 // const venueSchema
@@ -14,7 +14,8 @@ const userSchema = new mongoose.Schema({
 // // notes: Array
 const venueSchema = new mongoose.Schema({
   name: String,
-  notes: Array
+  notes: Array,
+  userID: String
   // pushing an objectw user id and their note int the notes array
 });
 

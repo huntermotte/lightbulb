@@ -44,7 +44,7 @@ export class Explore extends React.Component {
             this.props.addNoteToVenue(name, note)
             event.target.userInput.value = ''
           }} >
-            <input type="text" name="userInput" placeholder="Add your note here" />
+            <input type="text" required="true" name="userInput" placeholder="Add your note here" />
             <input className="noteAdd" type="submit" value="Add" />
           </form>
           <h3>Please click 'Save This Venue' in order to add notes!</h3>
@@ -103,6 +103,10 @@ const mapStateToProps = (state, props) => {
   if (state.notes) {
     notes = state.notes
   }
+  let addVenue = false;
+  if (state.addVenue) {
+    addVenue = state.addVenue
+  }
   return {
     venueName,
     venueType,
@@ -110,7 +114,8 @@ const mapStateToProps = (state, props) => {
     address,
     latitude,
     longitude,
-    notes
+    notes,
+    addVenue
   }
 }
 

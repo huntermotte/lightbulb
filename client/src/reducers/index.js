@@ -44,6 +44,12 @@ const usersReducer = (state=initialState, action) => {
       userData: action.userData
     }
   }
+  else if (action.type === actions.ADD_VENUE_SUCESS) {
+    return {
+      ...state,
+      addVenue: true
+    }
+  }
   else {
     return state
   }
