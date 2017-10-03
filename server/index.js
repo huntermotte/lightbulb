@@ -196,7 +196,7 @@ app.post('/api/venues', isAuthenticated, (req, res) => {
     let {name} = req.body
     console.log(req.user._id)
 
-    return Venue.find({name, userID: req.user._id})
+    return Venue.find({name: name, userID: req.user._id})
     .then(venue => {
       console.log(venue)
       if (venue.length > 0) {
