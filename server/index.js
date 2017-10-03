@@ -208,7 +208,7 @@ app.post('/api/venues', isAuthenticated, (req, res) => {
   })
 
   app.get('/api/venues', isAuthenticated, (req, res) => {
-    return Venue.find(req.user._id, (err, venues) => {
+    return Venue.find({'userID': req.user._id}, (err, venues) => {
       if (err) {
         res.send(err)
       }
