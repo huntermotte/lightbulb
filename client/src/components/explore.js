@@ -49,7 +49,7 @@ export class Explore extends React.Component {
           </form>
           <h3>Please click 'Save This Venue' in order to add notes!</h3>
 
-          <h2>Notes for {this.props.venueName}: {this.props.notes.map((note, index) => <li key={index}> {note} </li>)}</h2>
+          <h2>Notes for {this.props.venueName}: {this.props.notes.map((item, index) => <li key={index}> {item.note} </li>)}</h2>
           <h2>Address: {this.props.address}</h2>
           <h2>Category: {this.props.venueType}</h2>
           <h2>Price: {this.props.price}</h2>
