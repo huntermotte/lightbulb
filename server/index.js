@@ -19,7 +19,6 @@ app.use(bodyParser.json());
 
 // create users
 app.post('/api/register', (req, res) => {
-  console.log(req.body)
   if (!req.body) {
     return res.status(400).json({message: "No request body"});
   }
@@ -148,7 +147,7 @@ app.get('/api/logout', function(req, res) {
 app.post('/api/venues', isAuthenticated, (req, res) => {
   let {name} = req.body
   // check to see that venue doesnt already exist
-  return Venue.find({name})
+  return Venue.find({name: name, 'userID': req.user._id})
   .count()
   .exec()
   .then(count => {
@@ -198,11 +197,9 @@ app.post('/api/venues', isAuthenticated, (req, res) => {
   // check if venue exists and get its notes. do a count, if it exists return the venue and put it in the state. loop thru venue notes in the component
   app.post('/api/venues/notes', isAuthenticated, (req, res) => {
     let {name} = req.body
-    console.log(req.user._id)
 
-    return Venue.find({name: name, userID: req.user._id})
+    return Venue.find({name: name, 'userID': req.user._id})
     .then(venue => {
-      console.log(venue)
       if (venue.length > 0) {
         return res.json(venue)
       }

@@ -50,6 +50,12 @@ const usersReducer = (state=initialState, action) => {
       addVenue: true
     }
   }
+  else if (action.type === actions.CLEAR_VENUE_NOTES) {
+    return {
+      ...state,
+      notes: null
+    }
+  }
   else {
     return state
   }

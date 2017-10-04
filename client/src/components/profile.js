@@ -31,7 +31,7 @@ export class Profile extends React.Component {
                 <ul>
                   {venue.notes.map((note, index) => {
                     return(
-                      <li className="note" key={index}> {note} </li>
+                      <li className="note" key={index}> {note.note} </li>
                     )
                   })}
                 </ul>

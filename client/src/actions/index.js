@@ -25,6 +25,11 @@ export const acceptVenueNotes = (notes) => ({
   notes
 })
 
+export const CLEAR_VENUE_NOTES = 'CLEAR_VENUE_NOTES';
+export const clearVenueNotes = () => ({
+  type: CLEAR_VENUE_NOTES
+})
+
 export const SET_CURRENT_VENUE = 'SET_CURRENT_VENUE';
 export const setCurrentVenue = (currentVenue) => ({
   type: SET_CURRENT_VENUE,
@@ -74,7 +79,10 @@ export const addVenueToSavedList = (name) => {
         dispatch(addVenueSuccess())
         alert('Venue successfully added!')
       },
-      error: (err) => console.log(err)
+      error: (err) => {
+        console.log(err)
+        alert('Venue already saved!')
+      }
     })
   }
 }
@@ -106,8 +114,11 @@ export const grabNotesForSavedVenues = (name) => {
       contentType: 'application/json',
       url: '/api/venues/notes',
       success: (venue) => {
-        if (venue[0].notes) {
+        if (venue[0]) {
           dispatch(acceptVenueNotes(venue[0].notes))
+        }
+        else {
+          dispatch(clearVenueNotes())
         }
       },
       error: (err) => console.log(err)
@@ -157,7 +168,6 @@ export const getUserData = () => {
       type: 'GET',
       url: '/api/venues',
       success: (response) => {
-        console.log(response)
         dispatch(insertUserData(response))
       }
     })
