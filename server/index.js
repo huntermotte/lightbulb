@@ -179,7 +179,7 @@ app.post('/api/venues', isAuthenticated, (req, res) => {
       userID: req.user._id
     }
 
-    return Venue.update({name}, {$push: {"notes": data}}, (err, data) => {
+    return Venue.update({name: name, 'userID': req.user._id}, {$push: {"notes": data}}, (err, data) => {
       if(err) {
         res.send(err)
       } else {
