@@ -26,6 +26,14 @@ label {
   font-family: Ubuntu;
 }
 
+.demo {
+  width: 20%;
+  border: 2px solid white;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 /*.usernameText, .passwordText {
   display: block;
   width: 25%;
@@ -43,3 +51,49 @@ label {
       border-radius: none;
     }
 }
+
+/*==========  Mobile First Method  ==========*/
+
+    /* Custom, iPhone Retina */
+    @media only screen and (min-width : 320px) and (max-width : 480px) {
+      .demo {
+        position: static;
+        width: 100%;
+        margin-top: 10px;
+        width: 75%;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    /* Extra Small Devices, Phones */
+    @media only screen and (min-width : 480px) and (max-width : 768px) {
+      .demo {
+        position: static;
+        width: 100%;
+        margin-top: 10px;
+        width: 75%;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) and (max-width : 992px) {
+      .demo {
+        position: static;
+        width: 100%;
+        margin-top: 10px;
+        width: 75%;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) and (max-width : 1200px) {
+
+    }

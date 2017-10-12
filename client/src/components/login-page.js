@@ -34,6 +34,10 @@ export class LoginPage extends React.Component {
               <Link to={'/'}><button type="button" className="btn btn-default home">Home</button></Link>
             </div>
         </form>
+        <div className="demo">
+          <h3>Demo Username: demo</h3>
+          <h3>Demo Password: demo</h3>
+        </div>
       </div>
     )
   }
