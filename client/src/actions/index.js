@@ -100,8 +100,13 @@ export const addNoteToVenue = (name, note) => {
         if (response.notes) {
           alert('Note added!')
         }
+        else {
+          alert('Please save venue first!')
+        }
       },
-      error: (err) => console.log(err)
+      error: (err) => {
+        console.log(err)
+      }
     })
   }
 }
