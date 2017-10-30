@@ -182,7 +182,8 @@ app.post('/api/venues', isAuthenticated, (req, res) => {
     return Venue.update({name: name, 'userID': req.user._id}, {$push: {"notes": data}}, (err, data) => {
       if(err) {
         res.send(err)
-      } else {
+      }
+      else {
         Venue.findOne({name}, (err, venue) => {
           if(err) {
             res.send(err)

@@ -97,7 +97,7 @@ export const addNoteToVenue = (name, note) => {
       success: (response) => {
         console.log(response)
         dispatch(retrieveVenueData(response))
-        if (response.notes) {
+        if (response) {
           alert('Note added!')
         }
         else {
