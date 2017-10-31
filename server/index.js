@@ -179,20 +179,33 @@ app.post('/api/venues', isAuthenticated, (req, res) => {
       userID: req.user._id
     }
 
-    return Venue.update({name: name, 'userID': req.user._id}, {$push: {"notes": data}}, (err, data) => {
-      if(err) {
-        res.send(err)
-      }
-      else {
-        Venue.findOne({name}, (err, venue) => {
+    return Venue.find({name: name, 'userID': req.user._id})
+    .count()
+    .exec()
+    .then(count => {
+      if (count > 0) {
+        return Venue.update({name: name, 'userID': req.user._id}, {$push: {"notes": data}}, (err, data) => {
           if(err) {
             res.send(err)
           }
+          else {
+            Venue.findOne({name}, (err, venue) => {
+              if(err) {
+                res.send(err)
+              }
 
-          res.json(venue)
+              res.json(venue)
+            })
+          }
         })
       }
+
+      else {
+        return res.json({message: 'Please save venue first!'})
+      }
     })
+
+
   })
 
   // check if venue exists and get its notes. do a count, if it exists return the venue and put it in the state. loop thru venue notes in the component
