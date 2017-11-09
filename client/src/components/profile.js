@@ -26,7 +26,7 @@ export class Profile extends React.Component {
         <h1 className="profileHeader" >My Venues and Notes</h1>
         {this.props.userVenues.map((venue, index) => {
           return(
-            <div key={index}>
+            <div className="venue-with-notes" key={index}>
               <h2 className="venue"> {venue.name} </h2>
                 <ul>
                   {venue.notes.map((note, index) => {

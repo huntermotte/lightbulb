@@ -80,12 +80,21 @@
   margin-bottom: 5px;
 }
 
+.note-text {
+	height: 25px;
+  font-size: 15px;
+  font-family: Ubuntu;
+  width: 15%;
+	padding-left: 3px;
+}
+
 .noteAdd {
   background: #e74c3c;
   color: white;
   font-family: Ubuntu;
   border: 1px solid black;
   cursor: pointer;
+	height: 32px;
 }
 
 @-webkit-keyframes animate {
@@ -137,6 +146,13 @@ h1, h2, li, h3 {
     left: 50%;
   }
 
+	.note-text {
+	  font-size: 15px;
+	  font-family: Ubuntu;
+		padding-left: 3px;
+		width: 50%;
+	}
+
 
 }
 
@@ -161,6 +177,13 @@ h1, h2, li, h3 {
 			height: 56px;
 		}
 
+		.note-text {
+		  font-size: 15px;
+		  font-family: Ubuntu;
+			padding-left: 3px;
+			width: 50%;
+		}
+
 	}
 
 @media only screen
@@ -182,6 +205,13 @@ h1, h2, li, h3 {
 			right: 0;
 			width: 150px;
 		}
+
+		.note-text {
+		  font-size: 15px;
+		  font-family: Ubuntu;
+			padding-left: 3px;
+			width: 50%;
+		}
 	}
 
 @media only screen
@@ -194,6 +224,15 @@ h1, h2, li, h3 {
 			width: 150px;
 		}
 	}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
+	.note-text {
+		font-size: 15px;
+		font-family: Ubuntu;
+		padding-left: 3px;
+		width: 30%;
+	}
+}
 
 @media only screen
 	and (min-device-width: 768px)

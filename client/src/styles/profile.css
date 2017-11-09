@@ -39,6 +39,11 @@
   font-family: Ubuntu;
 }
 
+.venue-with-notes {
+	box-shadow: 3px 3px 3px #e74c3c;
+	padding-bottom: 10px;
+}
+
 .venue {
   font-family: Ubuntu;
   font-weight: bold;
