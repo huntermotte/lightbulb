@@ -1,23 +1,42 @@
-.mainNav {
-  float: right;
-  text-align: right;
-  width: 100%;
+.container {
+  background-color: #0072CE;
+  width: 100% !important;
+  height: 100vh;
+  font-family: 'Roboto Slab';
+  font-weight: bold;
 }
 
 .homeButton {
   float: right;
   position: absolute;
-  right: 20%;
+  right: 27%;
   text-align: center;
   font-size: 20px;
-  background: #e74c3c;
+  background: #FFFF00;
   padding: 10px;
   margin-left: 5px;
   margin-right: 5px;
   width: 120px;
-  color: white;
+  color: black;
   border: 1px solid black;
-  font-family: Ubuntu;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 25px;
+}
+
+.learnButton {
+  float: right;
+  position: absolute;
+  right: 18%;
+  text-align: center;
+  font-size: 20px;
+  background: #FFFF00;
+  padding: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 120px;
+  color: black;
+  border: 1px solid black;
   cursor: pointer;
   z-index: 1;
   border-radius: 25px;
@@ -26,17 +45,16 @@
 .registerButton {
   float: right;
   position: absolute;
-  right: 10%;
+  right: 9%;
   text-align: center;
   font-size: 20px;
-  background: #e74c3c;
+  background: #FFFF00;
   padding: 10px;
   margin-left: 5px;
   margin-right: 5px;
   width: 120px;
-  color: white;
+  color: black;
   border: 1px solid black;
-  font-family: Ubuntu;
   cursor: pointer;
   z-index: 1;
   border-radius: 25px;
@@ -48,31 +66,28 @@
   right: 0%;
   text-align: center;
   font-size: 20px;
-  background: #e74c3c;
+  background: #FFFF00;
   padding: 10px;
   margin-left: 5px;
   margin-right: 5px;
   width: 120px;
-  color: white;
+  color: black;
   border: 1px solid black;
-  font-family: Ubuntu;
   cursor: pointer;
   z-index: 1;
   border-radius: 25px;
 }
 
-.getStarted {
-  background: #e74c3c;
-  color: white;
+.get-started {
+  background: #FFFF00;
+  color: black;
   border: 1px solid black;
-  font-family: Ubuntu;
   border-radius: 25px;
   position: absolute;
   text-align: center;
-  top: 55%;
+  top: 97%;
   width: 150px;
   height: 40px;
-  font-family: Ubuntu;
   font-weight: bold;
   cursor: pointer;
   margin-left: auto;
@@ -82,233 +97,85 @@
   z-index: 1;
 }
 
+.mentor-explore {
+  background: #FFFF00;
+  color: black;
+  border-radius: 25px;
+  border: 1px solid black;
+  cursor: pointer;
+  width: 200px;
+  height: 40px;
+  font-weight: bold;
+  padding: 10px;
+}
 
+.logo {
+  position: absolute;
+  left: 2%;
+  top: 0;
+  color: #FFFF00;
+}
 
+.main-intro {
+  font-family: 'Roboto Slab';
+  font-weight: bold;
+  padding-top: 100px;
+  color: #FFFF00;
+}
 
-  /*==========  Mobile First Method  ==========*/
+.motto {
+  font-size: 50px;
+  font-weight: bold;
+}
 
-   /* Custom, iPhone Retina */
-   @media only screen and (min-width : 320px) and (max-width : 480px) {
-     video {
-       position: absolute;
-       z-index: 0;
-       background-size: 100% 100%;
-       top: 0px;
-       left: 0px; /* fixed to left. Replace it by right if you want.*/
-       min-width: 100%;
-       min-height: 100%;
-       width: auto;
-       height: auto;
-     }
+.logo-row {
+  padding-top: 35px;
+}
 
-     .homeButton {
-       position: absolute;
-       top: 15%;
-       left: 0%;
-       width: 30%;
-       z-index: 2;
-     }
+.skill-logos {
+  margin-right: 5px;
+}
 
-     .registerButton {
-       position: absolute;
-       top: 15%;
-       left: 10%;
-       margin-left: auto;
-       margin-right: auto;
-       text-align: center;
-       width: 30%;
-       z-index: 2;
-     }
+.general-summary {
+  text-align: center;
+  padding: 0;
+}
 
-     .loginButton {
-       position: absolute;
-       top: 15%;
-       text-align: center;
-       width: 30%;
-       z-index: 2;
-     }
+.help-examples {
+  text-align: center;
+  padding: 70px 0;
+  padding-top: 35px;
+}
 
-     .getStarted {
-       position: absolute;
-       top: 350px;
-     }
+#summary-sections {
+  display: inline-block;
+  background: #FFFF00;
+  width: 100% !important;
+}
 
-     .title {
-       left: 9%;
-       top: 100px;
-       z-index: 1;
-     }
+.callout {
+  display: inline-block;
+}
 
-     .header1 {
-       position: absolute;
-       padding-top: 150px;
-       z-index: 1;
-     }
+.skill-suggestion {
+  /*display: inline-block;*/
+}
 
-     .header2 {
-       position: absolute;
-       padding-top: 200px;
-       font-size: 15px;
-       z-index: 1;
-     }
+.typewriter {
+  display: inline-block;
+}
 
-     .header3 {
-       position: absolute;
-       padding-top: 250px;
-       font-size: 15px;
-       z-index: 1;
-     }
+.subheader {
+  font-size: 20px;
+}
 
-   }
+.header {
+  font-size: 35px;
+}
 
-   /* Extra Small Devices, Phones */
-   @media only screen and (min-width : 480px) and (max-width : 768px) {
-     video {
-       position: absolute;
-       z-index: 0;
-       background-size: 100% 100%;
-       top: 0px;
-       left: 0px; /* fixed to left. Replace it by right if you want.*/
-       min-width: 100%;
-       min-height: 100%;
-       width: auto;
-       height: auto;
-     }
-
-     .homeButton {
-       position: absolute;
-       top: 0;
-       right: 32%;
-       width: 15%;
-       z-index: 2;
-       margin-right: 10px;
-       font-size: 17px;
-     }
-
-     .registerButton {
-       position: absolute;
-       top: 0;
-       right: 18%;
-       margin-left: auto;
-       margin-right: auto;
-       text-align: center;
-       width: 15%;
-       z-index: 2;
-       font-size: 17px;
-     }
-
-     .loginButton {
-       position: absolute;
-       top: 0;
-       right: 2%;
-       text-align: center;
-       width: 15%;
-       font-size: 17px;
-     }
-
-     .getStarted {
-       position: absolute;
-       top: 350px;
-     }
-
-     .title {
-       left: 9%;
-       top: 0;
-       left: 0;
-       z-index: 1;
-     }
-
-     .header1 {
-       position: absolute;
-       padding-top: 150px;
-       z-index: 1;
-     }
-
-     .header2 {
-       position: absolute;
-       padding-top: 200px;
-       font-size: 15px;
-       z-index: 1;
-     }
-
-     .header3 {
-       position: absolute;
-       padding-top: 250px;
-       font-size: 15px;
-       z-index: 1;
-     }
-
-   }
-
-   /* Small Devices, Tablets */
-   @media only screen and (min-width : 768px) and (max-width : 1024px) {
-     .homeButton {
-       position: absolute;
-       top: 0;
-       right: 32%;
-       width: 15%;
-       z-index: 2;
-       margin-right: 10px;
-       font-size: 17px;
-     }
-
-     .registerButton {
-       position: absolute;
-       top: 0;
-       right: 18%;
-       margin-left: auto;
-       margin-right: auto;
-       text-align: center;
-       width: 15%;
-       z-index: 2;
-       font-size: 17px;
-     }
-
-     .loginButton {
-       position: absolute;
-       top: 0;
-       right: 2%;
-       text-align: center;
-       width: 15%;
-       font-size: 17px;
-     }
-   }
-
-   /* Medium Devices, Desktops */
-   @media only screen and (min-width : 1024px) and (max-width : 1200px) {
-     .homeButton {
-       position: absolute;
-       top: 0;
-       right: 33%;
-       width: 15%;
-       z-index: 2;
-       margin-right: 10px;
-       font-size: 17px;
-     }
-
-     .registerButton {
-       position: absolute;
-       top: 0;
-       right: 18%;
-       margin-left: auto;
-       margin-right: auto;
-       text-align: center;
-       width: 15%;
-       z-index: 2;
-       font-size: 17px;
-     }
-
-     .loginButton {
-       position: absolute;
-       top: 0;
-       right: 2%;
-       text-align: center;
-       width: 15%;
-       font-size: 17px;
-     }
-   }
-
-   /* Large Devices, Wide Screens */
-   @media only screen and (min-width : 1200px) {
-
-   }
+.footer-links {
+  display: inline-block;
+  color: #FFFF00;
+  margin-top: 10px;
+  margin-right: 16px;
+}

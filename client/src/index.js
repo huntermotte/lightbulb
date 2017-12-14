@@ -7,9 +7,10 @@ import store from './store';
 import {Router, Route, IndexRoute, hashHistory} from 'react-router';
 import RegisterPage from './components/register-page';
 import LoginPage from './components/login-page';
-import Explore from './components/explore';
+import Learn from './components/learn';
 import Home from './components/home';
-import Profile from './components/profile'
+import Profile from './components/profile';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 const routes = (
   <Provider store={store}>
@@ -18,7 +19,7 @@ const routes = (
         <IndexRoute component={Home} />
         <Route path="/register" component={RegisterPage} />
         <Route path="/login" component={LoginPage} />
-        <Route path="/explore" component={Explore} />
+        <Route path="/learn" component={Learn} />
         <Route path="/profile" component={Profile} />
       </Route>
     </Router>

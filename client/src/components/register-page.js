@@ -1,7 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import * as actions from '../actions/index';
-import sunset2 from './sunset2.jpg';
 import styles from '../styles/register.css';
 import {Link} from 'react-router';
 
@@ -12,11 +11,7 @@ export class RegisterPage extends React.Component {
 
   render() {
     return(
-      <div className="register-page" style={{
-        background: 'url(' + sunset2 + ') no-repeat center center fixed',
-        backgroundSize: 'cover',
-        height: '100vh'
-      }}>
+      <div className="register-page">
         <form className="registration-form" onSubmit={(event) => {
           event.preventDefault();
           let username = event.target.username.value;
