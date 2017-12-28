@@ -37,7 +37,7 @@ export class Learn extends React.Component {
           <div className="row">
             <div className="col-md-4">
               <h3>JavaScript</h3>
-              <button className="btn">Meet Now</button>
+              <a href="https://hangouts.google.com/hangouts/_/lightbulblearning.co/huntermotte" target="_blank"><button className="btn">Meet Now</button></a>
               <h4></h4>
               <ul className="issue-list">
                 <li>Why isn&#39;t my function working properly?</li>
@@ -47,7 +47,7 @@ export class Learn extends React.Component {
             </div>
             <div className="col-md-4">
               <h3>Node</h3>
-              <button className="btn">Meet Now</button>
+              <a href="https://hangouts.google.com/hangouts/_/lightbulblearning.co/huntermotte" target="_blank"><button className="btn">Meet Now</button></a>
               <h4>Get help with issues such as:</h4>
               <ul className="issue-list">
                 <li>Issue 1</li>
@@ -57,7 +57,7 @@ export class Learn extends React.Component {
             </div>
             <div className="col-md-4">
               <h3>Python</h3>
-              <button className="btn">Meet Now</button>
+              <a href="https://hangouts.google.com/hangouts/_/lightbulblearning.co/huntermotte" target="_blank"><button className="btn">Meet Now</button></a>
               <h4>Get help with issues such as:</h4>
               <ul className="issue-list">
                 <li>Issue 1</li>
@@ -69,7 +69,7 @@ export class Learn extends React.Component {
           <div className="row">
             <div className="col-md-4">
               <h3>Angular</h3>
-              <button className="btn">Meet Now</button>
+              <a href="https://hangouts.google.com/hangouts/_/lightbulblearning.co/huntermotte" target="_blank"><button className="btn">Meet Now</button></a>
               <h4>Get help with issues such as:</h4>
               <ul className="issue-list">
                 <li>Issue 1</li>
@@ -79,7 +79,7 @@ export class Learn extends React.Component {
             </div>
             <div className="col-md-4">
               <h3>CSS</h3>
-              <button className="btn">Meet Now</button>
+              <a href="https://hangouts.google.com/hangouts/_/lightbulblearning.co/huntermotte" target="_blank"><button className="btn">Meet Now</button></a>
               <h4>Get help with issues such as:</h4>
               <ul className="issue-list">
                 <li>Issue 1</li>
@@ -89,7 +89,7 @@ export class Learn extends React.Component {
             </div>
             <div className="col-md-4">
               <h3>Ruby</h3>
-              <button className="btn">Meet Now</button>
+              <a href="https://hangouts.google.com/hangouts/_/lightbulblearning.co/huntermotte" target="_blank"><button className="btn">Meet Now</button></a>
               <h4>Get help with issues such as:</h4>
               <ul className="issue-list">
                 <li>Issue 1</li>
