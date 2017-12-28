@@ -28,7 +28,20 @@ export class Learn extends React.Component {
         <h1>What will you learn today?</h1>
         <h2>Search for what you need help with: </h2>
         <form className="searchbar">
-          <input type="text" className="query" name="search" placeholder="Enter skills Ex. JavaScript, React, Node, Angular..." />
+          <input type="text" id="userInput" onKeyUp={() => {
+            let input, filter, h3, topic, i;
+            input = document.getElementById("userInput");
+            filter = input.value.toUpperCase();
+            h3 = document.getElementsByTagName("h3");
+            for (i = 0; i < h3.length; i++) {
+              if (h3[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                h3[i].parentElement.style.display = "";
+              }
+              else {
+                h3[i].parentElement.style.display = "none";
+              }
+            }
+          }} className="query" name="search" placeholder="Enter skills Ex. JavaScript, React, Node, Angular..." />
           <input type="submit" className="search-button" value="Search" />
         </form>
       </div>
