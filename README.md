@@ -4,7 +4,7 @@ Find an expert developer to help in the exact topic you need, exactly when you n
 
 ![alt text](lightbulbHome.png)
 
-##The Basics
+## The Basics
 
 ![alt text](lightbulbLearn.png)
 
