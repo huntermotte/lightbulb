@@ -48,17 +48,17 @@ export class Learn extends React.Component {
 
         <div className="learning-sections">
           <div className="row">
-            <div className="col-md-4">
+            <div className="topic col-md-4">
               <h3>JavaScript</h3>
               <a href="https://hangouts.google.com/hangouts/_/lightbulblearning.co/huntermotte" target="_blank"><button className="btn">Meet Now</button></a>
-              <h4></h4>
+              <h4>Get help with issues such as:</h4>
               <ul className="issue-list">
                 <li>Why isn&#39;t my function working properly?</li>
                 <li>Issue 2</li>
                 <li>Issue 3</li>
               </ul>
             </div>
-            <div className="col-md-4">
+            <div className="topic col-md-4">
               <h3>Node</h3>
               <a href="https://hangouts.google.com/hangouts/_/lightbulblearning.co/huntermotte" target="_blank"><button className="btn">Meet Now</button></a>
               <h4>Get help with issues such as:</h4>
@@ -68,7 +68,7 @@ export class Learn extends React.Component {
                 <li>Issue 3</li>
               </ul>
             </div>
-            <div className="col-md-4">
+            <div className="topic col-md-4">
               <h3>Python</h3>
               <a href="https://hangouts.google.com/hangouts/_/lightbulblearning.co/huntermotte" target="_blank"><button className="btn">Meet Now</button></a>
               <h4>Get help with issues such as:</h4>
@@ -80,7 +80,7 @@ export class Learn extends React.Component {
             </div>
           </div>
           <div className="row">
-            <div className="col-md-4">
+            <div className="topic col-md-4">
               <h3>Angular</h3>
               <a href="https://hangouts.google.com/hangouts/_/lightbulblearning.co/huntermotte" target="_blank"><button className="btn">Meet Now</button></a>
               <h4>Get help with issues such as:</h4>
@@ -90,7 +90,7 @@ export class Learn extends React.Component {
                 <li>Issue 3</li>
               </ul>
             </div>
-            <div className="col-md-4">
+            <div className="topic col-md-4">
               <h3>CSS</h3>
               <a href="https://hangouts.google.com/hangouts/_/lightbulblearning.co/huntermotte" target="_blank"><button className="btn">Meet Now</button></a>
               <h4>Get help with issues such as:</h4>
@@ -100,7 +100,7 @@ export class Learn extends React.Component {
                 <li>Issue 3</li>
               </ul>
             </div>
-            <div className="col-md-4">
+            <div className="topic col-md-4">
               <h3>Ruby</h3>
               <a href="https://hangouts.google.com/hangouts/_/lightbulblearning.co/huntermotte" target="_blank"><button className="btn">Meet Now</button></a>
               <h4>Get help with issues such as:</h4>
