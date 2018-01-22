@@ -2,11 +2,11 @@
 
 Find an expert developer to help in the exact topic you need, exactly when you need it.
 
-![alt text](ligtbulbHome.png)
+![alt text](lightbulbHome.png)
 
 ##The Basics
 
-![alt text](ligtbulbLearn.png)
+![alt text](lightbulbLearn.png)
 
 * Search your topic, get quickly connected with someone who is proven to know that technology
 * Consult with your developer on an hourly basis (pro-rated, no minimums)
