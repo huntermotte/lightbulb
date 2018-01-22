@@ -49,7 +49,7 @@ export class Learn extends React.Component {
         <div className="learning-sections">
           <div className="row">
             <div className="topic col-md-4">
-              <h3>JavaScript</h3>
+              <h3>JavaScript (client)</h3>
               <a href="https://hangouts.google.com/hangouts/_/lightbulblearning.co/huntermotte" target="_blank"><button className="btn">Meet Now</button></a>
               <h4>Get help with issues such as:</h4>
               <ul className="issue-list">
@@ -102,6 +102,38 @@ export class Learn extends React.Component {
             </div>
             <div className="topic col-md-4">
               <h3>Ruby</h3>
+              <a href="https://hangouts.google.com/hangouts/_/lightbulblearning.co/huntermotte" target="_blank"><button className="btn">Meet Now</button></a>
+              <h4>Get help with issues such as:</h4>
+              <ul className="issue-list">
+                <li>Issue 1</li>
+                <li>Issue 2</li>
+                <li>Issue 3</li>
+              </ul>
+            </div>
+          </div>
+          <div className="row">
+            <div className="topic col-md-4">
+              <h3>Java</h3>
+              <a href="https://hangouts.google.com/hangouts/_/lightbulblearning.co/huntermotte" target="_blank"><button className="btn">Meet Now</button></a>
+              <h4>Get help with issues such as:</h4>
+              <ul className="issue-list">
+                <li>Issue 1</li>
+                <li>Issue 2</li>
+                <li>Issue 3</li>
+              </ul>
+            </div>
+            <div className="topic col-md-4">
+              <h3>Webpack</h3>
+              <a href="https://hangouts.google.com/hangouts/_/lightbulblearning.co/huntermotte" target="_blank"><button className="btn">Meet Now</button></a>
+              <h4>Get help with issues such as:</h4>
+              <ul className="issue-list">
+                <li>Issue 1</li>
+                <li>Issue 2</li>
+                <li>Issue 3</li>
+              </ul>
+            </div>
+            <div className="topic col-md-4">
+              <h3>Vue</h3>
               <a href="https://hangouts.google.com/hangouts/_/lightbulblearning.co/huntermotte" target="_blank"><button className="btn">Meet Now</button></a>
               <h4>Get help with issues such as:</h4>
               <ul className="issue-list">

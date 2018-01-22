@@ -40,14 +40,14 @@ export default function Home(props) {
       <div className="row general-summary">
         <h1 className="motto col-md-6">Get programming help, exactly when you need it <br></br>
           <div className="row logo-row">
-            <img className="skill-logos" src={js} height="50" width="50" />
-            <img className="skill-logos" src={angular} height="50" width="50" />
-            <img className="skill-logos" src={reactLogo} height="50" width="50" />
-            <img className="skill-logos" src={node} height="50" width="70" />
-            <img className="skill-logos" src={python} height="50" width="50" />
-            <img className="skill-logos" src={mongodb} height="50" width="35" />
-            <img className="skill-logos" src={vue} height="50" width="50" />
-            <img className="skill-logos" src={ruby} height="50" width="50" />
+            <img className="skill-logos" alt="JavaScript" src={js} height="50" width="50" />
+            <img className="skill-logos" alt="Angular" src={angular} height="50" width="50" />
+            <img className="skill-logos" alt="React" src={reactLogo} height="50" width="50" />
+            <img className="skill-logos" alt="Node" src={node} height="50" width="70" />
+            <img className="skill-logos" alt="Python" src={python} height="50" width="50" />
+            <img className="skill-logos" alt="MongoDB" src={mongodb} height="50" width="35" />
+            <img className="skill-logos" alt="Vue" src={vue} height="50" width="50" />
+            <img className="skill-logos" alt="Ruby on Rails" src={ruby} height="50" width="50" />
           </div>
         </h1>
         <h2 className="col-md-6"><i className="fa fa-bolt" aria-hidden="true" /> Select the topic you need help with and find an expert who can assist <br></br><br></br><i className="fa fa-bolt" aria-hidden="true" /> Work more efficiently and consult with some of the brightest around the world</h2><br></br>
