@@ -1,1 +1,29 @@
+.video {
+  object-fit: contain;
+}
 
+.usernameText, .passwordText {
+  font-family: 'Roboto Slab';
+  font-size: 25px;
+  color: #FFFF00;
+}
+
+input.btn.btn-default.submit, button.btn.btn-default.home {
+  background-color: #FFFF00;
+  color: black;
+  font-weight: bold;
+}
+
+.login-form {
+  position: absolute;
+  z-index: 1;
+  background-color: #0072CE;
+  margin-top: 13%;
+  width: 400px;
+  height: 400px;
+	left: 37%;
+	padding-left: 40px;
+	padding-right: 40px;
+  padding-top: 70px;
+  border: 10px solid white;
+}

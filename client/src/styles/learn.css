@@ -1,3 +1,13 @@
+.learnMain {
+  background-color: #0072CE;
+  height: 100vh;
+}
+
+.learn-header {
+  color: #FFFF00;
+  font-family: 'Roboto Slab';
+}
+
 .learn-home {
   float: right;
   position: absolute;
@@ -42,18 +52,25 @@
 
 .topic {
   border: 1px solid black;
-  /* background-color: #0072CE; */
+  background: linear-gradient(to bottom right, white, #FFFF00);
   min-height: 100%;
   text-align: center;
   padding-right: 5px;
   padding-left: 5px;
 }
 
+.topic-header {
+  color: #0072CE;
+  font-weight: bold;
+  font-family: 'Roboto Slab';
+}
+
+
 .learn-intro {
   padding-top: 5%;
 }
 
-input[type=text] {
+#userInput {
     width: 800px;
     margin-left: auto;
     margin-right: auto;
@@ -73,6 +90,8 @@ input[type=text] {
 .search-button {
     width: 100px;
     height: 50px;
+    background-color: #FFFF00;
+    color: black;
 }
 
 .learning-sections {
@@ -81,4 +100,13 @@ input[type=text] {
 
 .issue-list {
   text-align: left;
+  color: #0072CE;
+  font-weight: bold;
+  font-family: 'Roboto Slab';
+}
+
+.issue-header {
+  color: #0072CE;
+  font-weight: bold;
+  font-family: 'Roboto Slab';
 }

@@ -25,8 +25,8 @@ export class Learn extends React.Component {
       </nav>
 
       <div className="learn-intro">
-        <h1>What will you learn today?</h1>
-        <h2>Search for what you need help with: </h2>
+        <h1 className="learn-header">What will you learn today?</h1>
+        <h2 className="learn-header">Search for what you need help with: </h2>
         <form className="searchbar">
           <input type="text" id="userInput" onKeyUp={() => {
             let input, filter, h3, topic, i;
@@ -49,9 +49,9 @@ export class Learn extends React.Component {
         <div className="learning-sections">
           <div className="row">
             <div className="topic col-md-4">
-              <h3>JavaScript (client)</h3>
+              <h3 className="topic-header">JavaScript (client side)</h3>
               <a href="https://hangouts.google.com/hangouts/_/lightbulblearning.co/huntermotte" target="_blank"><button className="btn">Meet Now</button></a>
-              <h4>Get help with issues such as:</h4>
+              <h4 className="issue-header">Get help with issues such as:</h4>
               <ul className="issue-list">
                 <li>Why isn&#39;t my function working properly?</li>
                 <li>Issue 2</li>
@@ -59,9 +59,9 @@ export class Learn extends React.Component {
               </ul>
             </div>
             <div className="topic col-md-4">
-              <h3>Node</h3>
+              <h3 className="topic-header">Node</h3>
               <a href="https://hangouts.google.com/hangouts/_/lightbulblearning.co/huntermotte" target="_blank"><button className="btn">Meet Now</button></a>
-              <h4>Get help with issues such as:</h4>
+              <h4 className="issue-header">Get help with issues such as:</h4>
               <ul className="issue-list">
                 <li>Issue 1</li>
                 <li>Issue 2</li>
@@ -69,41 +69,9 @@ export class Learn extends React.Component {
               </ul>
             </div>
             <div className="topic col-md-4">
-              <h3>Python</h3>
+              <h3 className="topic-header">Python</h3>
               <a href="https://hangouts.google.com/hangouts/_/lightbulblearning.co/huntermotte" target="_blank"><button className="btn">Meet Now</button></a>
-              <h4>Get help with issues such as:</h4>
-              <ul className="issue-list">
-                <li>Issue 1</li>
-                <li>Issue 2</li>
-                <li>Issue 3</li>
-              </ul>
-            </div>
-          </div>
-          <div className="row">
-            <div className="topic col-md-4">
-              <h3>Angular</h3>
-              <a href="https://hangouts.google.com/hangouts/_/lightbulblearning.co/huntermotte" target="_blank"><button className="btn">Meet Now</button></a>
-              <h4>Get help with issues such as:</h4>
-              <ul className="issue-list">
-                <li>Issue 1</li>
-                <li>Issue 2</li>
-                <li>Issue 3</li>
-              </ul>
-            </div>
-            <div className="topic col-md-4">
-              <h3>CSS</h3>
-              <a href="https://hangouts.google.com/hangouts/_/lightbulblearning.co/huntermotte" target="_blank"><button className="btn">Meet Now</button></a>
-              <h4>Get help with issues such as:</h4>
-              <ul className="issue-list">
-                <li>Issue 1</li>
-                <li>Issue 2</li>
-                <li>Issue 3</li>
-              </ul>
-            </div>
-            <div className="topic col-md-4">
-              <h3>Ruby</h3>
-              <a href="https://hangouts.google.com/hangouts/_/lightbulblearning.co/huntermotte" target="_blank"><button className="btn">Meet Now</button></a>
-              <h4>Get help with issues such as:</h4>
+              <h4 className="issue-header">Get help with issues such as:</h4>
               <ul className="issue-list">
                 <li>Issue 1</li>
                 <li>Issue 2</li>
@@ -113,9 +81,9 @@ export class Learn extends React.Component {
           </div>
           <div className="row">
             <div className="topic col-md-4">
-              <h3>Java</h3>
+              <h3 className="topic-header">Angular</h3>
               <a href="https://hangouts.google.com/hangouts/_/lightbulblearning.co/huntermotte" target="_blank"><button className="btn">Meet Now</button></a>
-              <h4>Get help with issues such as:</h4>
+              <h4 className="issue-header">Get help with issues such as:</h4>
               <ul className="issue-list">
                 <li>Issue 1</li>
                 <li>Issue 2</li>
@@ -123,9 +91,9 @@ export class Learn extends React.Component {
               </ul>
             </div>
             <div className="topic col-md-4">
-              <h3>Webpack</h3>
+              <h3 className="topic-header">CSS</h3>
               <a href="https://hangouts.google.com/hangouts/_/lightbulblearning.co/huntermotte" target="_blank"><button className="btn">Meet Now</button></a>
-              <h4>Get help with issues such as:</h4>
+              <h4 className="issue-header">Get help with issues such as:</h4>
               <ul className="issue-list">
                 <li>Issue 1</li>
                 <li>Issue 2</li>
@@ -133,9 +101,41 @@ export class Learn extends React.Component {
               </ul>
             </div>
             <div className="topic col-md-4">
-              <h3>Vue</h3>
+              <h3 className="topic-header">Ruby</h3>
               <a href="https://hangouts.google.com/hangouts/_/lightbulblearning.co/huntermotte" target="_blank"><button className="btn">Meet Now</button></a>
-              <h4>Get help with issues such as:</h4>
+              <h4 className="issue-header">Get help with issues such as:</h4>
+              <ul className="issue-list">
+                <li>Issue 1</li>
+                <li>Issue 2</li>
+                <li>Issue 3</li>
+              </ul>
+            </div>
+          </div>
+          <div className="row">
+            <div className="topic col-md-4">
+              <h3 className="topic-header">Java</h3>
+              <a href="https://hangouts.google.com/hangouts/_/lightbulblearning.co/huntermotte" target="_blank"><button className="btn">Meet Now</button></a>
+              <h4 className="issue-header">Get help with issues such as:</h4>
+              <ul className="issue-list">
+                <li>Issue 1</li>
+                <li>Issue 2</li>
+                <li>Issue 3</li>
+              </ul>
+            </div>
+            <div className="topic col-md-4">
+              <h3 className="topic-header">PHP</h3>
+              <a href="https://hangouts.google.com/hangouts/_/lightbulblearning.co/huntermotte" target="_blank"><button className="btn">Meet Now</button></a>
+              <h4 className="issue-header">Get help with issues such as:</h4>
+              <ul className="issue-list">
+                <li>Issue 1</li>
+                <li>Issue 2</li>
+                <li>Issue 3</li>
+              </ul>
+            </div>
+            <div className="topic col-md-4">
+              <h3 className="topic-header">Vue</h3>
+              <a href="https://hangouts.google.com/hangouts/_/lightbulblearning.co/huntermotte" target="_blank"><button className="btn">Meet Now</button></a>
+              <h4 className="issue-header">Get help with issues such as:</h4>
               <ul className="issue-list">
                 <li>Issue 1</li>
                 <li>Issue 2</li>
