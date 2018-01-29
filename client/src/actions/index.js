@@ -43,7 +43,7 @@ export const getLoggedInUser = (username, password) => {
       url: '/api/me',
       success: (user) => {
         dispatch(receiveCredentials(user))
-        hashHistory.push('/explore')
+        hashHistory.push('/learn')
       },
       error: (err) => {
         console.log(err)
