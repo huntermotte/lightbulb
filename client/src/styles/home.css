@@ -217,6 +217,8 @@
 
   .mentor-explore {
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .motto {
@@ -225,6 +227,8 @@
 
   .logo-row {
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   footer {
