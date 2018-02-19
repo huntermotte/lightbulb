@@ -107,6 +107,7 @@
   height: 40px;
   font-weight: bold;
   padding: 10px;
+  text-align: center;
 }
 
 .logo {
@@ -212,6 +213,18 @@
 
   .loginButton {
     width: 100px;
+  }
+
+  .mentor-explore {
+    text-align: center;
+  }
+
+  .motto {
+    font-size: 45px;
+  }
+
+  .logo-row {
+    text-align: center;
   }
 
   footer {
