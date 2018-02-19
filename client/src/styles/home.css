@@ -179,3 +179,42 @@
   margin-top: 10px;
   margin-right: 16px;
 }
+
+/* Media Queries */
+
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+  .help-examples {
+    background-color: #0072CE;
+  }
+
+  .general-summary {
+    background-color: #0072CE;
+  }
+
+  .logo {
+    padding-top: 40px;
+  }
+
+  .homeButton {
+    left: 0;
+    width: 100px;
+  }
+
+  .learnButton {
+    left: 24%;
+    width: 100px;
+  }
+
+  .registerButton {
+    left: 49%;
+    width: 100px;
+  }
+
+  .loginButton {
+    width: 100px;
+  }
+
+  footer {
+    background-color: #0072CE;
+  }
+}

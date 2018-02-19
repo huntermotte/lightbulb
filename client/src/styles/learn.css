@@ -110,3 +110,13 @@
   font-weight: bold;
   font-family: 'Roboto Slab';
 }
+
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+  .learn-home {
+    left: 36%;
+  }
+
+  .learn-header {
+    padding-top: 30px;
+  }
+}

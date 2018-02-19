@@ -55,14 +55,14 @@ export default function Home(props) {
 
 
 
-      <div className="col-md-12 help-examples">
+      <div className="row help-examples">
         <h2 className="skill-suggestion">Need help with {skillAnimation(skill)} Find a mentor!</h2>
         <button className="mentor-explore">Meet Our Mentors</button>
       </div>
     </div>
 
       <div id="summary-sections">
-			   <div className="row">
+			   <div className="row no-gutter">
 				     <div className="col-lg-4 callout">
 					       <span><i className="fa fa-code fa-5x" aria-hidden="true"></i></span>
 					       <h2 className="header">Become a better programmer</h2>
