@@ -25,7 +25,7 @@ export default function Home(props) {
 
 
   return(
-    <div className="container">
+    <div className="home-container">
 
     <nav className="mainNav">
       <h1 className="logo"><img src={lightbulb} /> Lightbulb Learning</h1>
